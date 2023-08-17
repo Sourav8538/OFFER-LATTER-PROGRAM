@@ -1,0 +1,34 @@
+package practiceset;
+//Strong no problem
+public class Strong_no {
+	static int fact(int n)
+	{
+		int fact=1;
+		for(int i=n;i>0;i++)
+		{
+			fact=fact*i;
+		}
+		return fact;
+	}
+	static boolean check(int num)
+	{ 
+		int sum=0;
+		while(num!=0)
+		{
+			int rem=num%10;
+			sum=sum+fact(rem);
+			num=num/10;
+		}
+		return sum==num;
+	}
+	public static void main(String[] args) {
+		
+		if(check(105)==true)
+		{
+			System.out.println("strong");
+		}
+		else{
+			System.out.println("not strong");
+		}
+	}
+}
